@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destructuring</title>
 
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel"></script>
+
     <script>
     
-    //destructuring
+    //destructuring contexto de Arrays => []
 
     let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
 
@@ -24,7 +28,27 @@
     
 
     console.log(`${n1} não gosta de ${f1}`)
+
+    //destructuring contexto a objeto => {}
+
+    let produto = {
+        descricao: 'Notbook',
+        preco: 1800,
+        detalhes: {
+            fabricante: 'abc',
+            modelo: 'xyz'
+        }
+    }
+
+    //let {descricao, preco} = produto
+
+    //let {descricao: d, preco: p} = produto
+
+    let { descricao: d, preco: p, desconto} = produto
     
+
+    console.log(d, p)
+
 </script>
 
 </head>
